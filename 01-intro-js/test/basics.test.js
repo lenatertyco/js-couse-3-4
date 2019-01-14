@@ -14,7 +14,7 @@ describe('JS Basics', function () {
             var b = 0;
 
             // change first parameter to expected number
-            assert.equal(42, a / b);
+            assert.equal(NaN, a / b);
         });
 
         it('should be able to round numbers', function () {
