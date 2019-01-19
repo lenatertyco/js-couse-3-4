@@ -24,3 +24,31 @@
         updateLabel(labelSecond, 'Second button:', state.second)
     });
 })()
+
+
+(function(){
+    var state = {
+        firstMinus: first,
+        secondMinus: second
+    }
+
+    function updateLabel(labelElement, prefix, count){
+        labelElement.innerText = prefix + ' ' + count;
+    }
+
+    var labelFirstMinus = document.querySelector('#label-firstMinus');
+    var firstMinusButton = document.querySelector('#btn-firstMinus');
+
+    var labelSecondMinus = document.querySelector('#label-secondMinus');
+    var secondMinusButton = document.querySelector('#btn-secondMinus');
+
+    firstMinusButton.addEventListener('click', function(e){
+        state.firstMinus = state.first - 1;
+        updateLabel(labelFirstMinus, 'First button:', state.firstMinus)
+    })
+
+    secondMinusButton.addEventListener('click', function(e){
+        state.secondMinus = state.second - 1;
+        updateLabel(labelSecondMinus, 'Second button:', state.secondMinus)
+    });
+})()
